@@ -44,3 +44,21 @@ remains = k % n
 print(get)
 print(remains)
 
+
+
+# 5
+vod_min = int(input())
+hours = vod_min // 60
+ost_min = vod_min % 60
+print(f"{vod_min} минуты - это {hours} час {ost_min} минут.")
+
+
+
+
+
+# 6
+import math
+x_degr = float(input())
+x_radi = math.radi(x_degr)
+result = math.sin(x_radi) + math.cos(x_radi) + (math.tan(x_radi) ** 2)
+print(result)
