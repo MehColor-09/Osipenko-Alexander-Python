@@ -1,0 +1,62 @@
+# Практическая 5
+# 1
+TAX = 0.13
+zarp_bez_naloga = float(input("Введите ваш годовой доход: "))
+nalog = zarp_bez_naloga * TAX
+zarp = zarp_bez_naloga - nalog
+print(f"Общая сумма дохода: {zarp_bez_naloga:,.2f} руб.")
+print(f"Сумма рассчитанного налога: {nalog:,.2f} руб.")
+print(f"Сумма «на руки» после вычета налога: {zarp:,.2f} руб.")
+
+
+
+
+# 2
+weight, height = map(float, input("Введите вес (кг) и рост (м) через пробел: ").split())
+bmi = weight / (height * height)
+print(f"Ваш Индекс Массы Тела (ИМТ): {bmi:.1f}")
+
+
+
+
+# 3
+USD_TO_RUB = 95.50
+def convert_usd_to_rub(amount_usd):
+    return amount_usd * USD_TO_RUB
+usd_amount = float(input("Введите сумму в долларах (USD): "))
+rub_amount = convert_usd_to_rub(usd_amount)
+print(f"Сумма в рублях: {rub_amount:,.2f} руб.".replace(",", " "))
+
+
+
+
+
+# 4
+import math
+PI = math.pi
+def calculate_rectangle_area(width, height):
+    return width * height
+def calculate_circle_area(radius):
+    """Считает площадь круга."""
+    return PI * (radius ** 2)
+w, h = map(float, input("Введите ширину и высоту прямоугольника через пробел: ").split())
+print(f"Площадь прямоугольника: {calculate_rectangle_area(w, h):.2f}")
+r = float(input("Введите радиус круга: "))
+print(f"Площадь круга: {calculate_circle_area(r):.2f}")
+
+
+
+
+# 5
+BANKNOTES = (5000, 2000, 1000, 500, 200, 100)
+amount = int(input("Введите сумму для снятия (кратную 100): "))
+print("Выданные купюры:")
+for note in BANKNOTES:
+    if amount >= note:
+        count = amount // note  
+        amount = amount % note  
+        print(f"Купюры номиналом {note} руб.: {count} шт.")
+
+
+
+# 6
